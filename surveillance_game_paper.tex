@@ -108,9 +108,8 @@
 Algorithmic systems aimed to classify, track, and predict the behavior of populations are deeply debated in democracies, but they are already 
 being in places where people have fewer freedoms. Also when used by authoritarian governments towards population whose rights are limited,
 such technology creates strategic environments. Risk scoring, facial recognition, and movement prediction technologies create continuous games 
-between surveillance authorities and those subjected to monitoring. This paper asks: How do targets of algorithmic surveillance adapt their 
-behavior? Does this strategic interaction push systems toward harsher policies or systematic errors? And crucially, are such errors tolerated 
-or even instrumentalized because they serve broader goals of population control? 
+between surveillance authorities and those subjected to monitoring. In fact, the latters might choose to adapt their behaviours to defy such systems, and in turn, the surveillance authorities may be able to learn from the adapted behavious and change their strategy accordingly. This paper asks: How do targets of algorithmic surveillance adapt their behavior? Does this strategic interaction push systems toward harsher policies or systematic errors? And crucially, are such errors tolerated 
+behavior? Does this strategic interaction push systems toward harsher policies or systematic errors? And crucially, are such errors tolerated  or even instrumentalized because they serve broader goals of population control? 
 
 We address these questions through analysis of Israel's Blue Wolf system, a biometric surveillance program deployed by the 
 Israeli Defense Forces (IDF) in the occupied West Bank, with particular intensity in Hebron. Blue Wolf combines facial recognition technology, 
@@ -133,8 +132,8 @@ control regardless of actual security outcomes.
 
 The paper proceeds as follows. Section 2 situates the analysis within literature on algorithmic governance, surveillance studies, 
 and game-theoretic approaches to repression. Section 3 presents the empirical context of Blue Wolf in Hebron. Section 4 develops the 
-formal model. Section 5 analyzes equilibrium behavior and comparative statics. Section 6 discusses policy implications and limitations. 
-Section 7 concludes.
+formal model. Section 5 analyzes equilibrium behavior and comparative statics. Section 6 discusses policy implications and limitations. Section 7 identifies a venue for this case to be modeled as a signaling game, providing durection for further research. 
+Section 8 provides concluding remarks.
 
 % 2. THEORETICAL FRAMEWORK
 \section{Theoretical Framework}
@@ -147,7 +146,7 @@ also benefits opposition groups. Three results from their analysis are particula
 increases government preventive repression in equilibrium. Second, the probability that government successfully prevents opposition mobilization 
 increases with technological development. Third, authoritarian governments prefer technologies that reduce the cost of preventive control and
 will strategically allow or block technologies based on their differential effects. We extend this framework in two directions. First, we 
-incorporate incomplete information about individual `threat types', i.e.  fact that the state cannot perfectly distinguish between those who 
+incorporate incomplete information about individual `threat types', i.e. the fact that the state cannot perfectly distinguish between those who 
 pose a real security threats and ordinary civilians. This generates classification errors with strategic consequences. Second, we model behavioral 
 adaptation by surveilled populations, i.e. changes in movement, communication, and social behavior in response to algorithmic monitoring.
 
@@ -158,10 +157,9 @@ of population management and territorial control \citep{zureik2011colonialism, s
 `terror capitalism' illuminates how surveillance technologies serve dual functions: extracting value through data accumulation while facilitating 
 state control over minoritized populations. In the Palestinian context, \citet{goodfriend2023algorithmic} documents how Blue Wolf functions as 
 `algorithmic state violence,' converting the intimate details of daily life into data streams that simultaneously enable capital accumulation  
-within Israeli society and intensify control over Palestinians. This literature suggests that algorithmic `errors', like false positives and 
+within Israeli society and intensify control over Palestinians. Additionally, studies suggest that algorithmic `errors', like false positives and 
 generally misclassifications, may not simply be technical failures to be minimized, but may serve political functions within regimes of population 
-control. The game-theoretic framework developed below formalizes 
-this intuition.
+control. A piece of investigative journalism by +972 Magazine explains that in the context of the search and elimination of targets, the Israely army has dramatically expanded their definition of "human target" since October 7, when Hamas-led militants launched a deadly assault on southern Israeli communities (\citeyear{Abraham2024Lavender}). From being a term used to designate senior military operative, which numbered only a few dozen people that could be inspected by intelligence personell and located individually, under “Operation Iron Swords,” the army decided to designate all operatives of Hamas’ military wing as human targets, regardless of their rank or military importance. Being now the number of the targets in the thousands, the IDF recurred to the use of a new AI system, called Lavander, to add people to their 'kill list'. The approval to automatically adopt Lavender’s kill lists was only granted about two weeks into the war, after intelligence manually checked its accurate detection out of a random sample of several hundred targets. Even if Lavander is used in a different context than Blue wolf, this shows that to hunt down security threats, the AI that the army use is highly prone to errors and misclassifications, and gives reasons to believe that the AI used for population control might have similar faults. Additionally, detecting many real security threats would reinforce the counter-terrorism frame that benefits the political goals of Israel and its allies, which suggests that a miscassification might not only be unaccounted for, but even desirable. The literature gives reasons to believe that the IDF misclassifies civilians as real security threats, and might have political interests to do so. The game-theoretic framework developed below formalizes this intuition.
 
 % 3. EMPIRICAL CONTEXT
 \section{Empirical Context: Blue Wolf in Hebron}
@@ -403,6 +401,11 @@ technical accuracy is an insufficient criterion for evaluating systems deployed 
 Amnesty International. (2023).
 \newblock Automated Apartheid: How Facial Recognition Fragments, Segregates and Controls Palestinians in the OPT.
 \newblock Technical report, Amnesty International.
+
+\bibitem[Abraham, 2024]{abraham2024lavender}
+Abraham, Y. (2024).
+\newblock `Lavender': The AI machine directing Israel's bombing spree in Gaza.
+\newblock +972 Magazine, April 3, 2024. Retrieved from \url{https://www.972mag.com/lavender-ai-israeli-army-gaza/}
 
 \bibitem[Benjamin, 2019]{benjamin2019race}
 Benjamin, R. (2019).
