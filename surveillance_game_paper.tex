@@ -66,7 +66,7 @@
     \vspace*{2cm}
     \begin{center}
     
-    {\Large\bfseries Algorithmic Surveillance and Population Control}\\[0.35cm]
+    {\Large\bfseries Algorithmic Surveillance and Population Control of Palestinians}\\[0.35cm]
     {\large\bfseries A Game-Theoretic Analysis of Israel's Blue Wolf System in Hebron}\\[1.2cm]
     
     {\normalsize Giorgio Coppola and Giulia Maria Petrilli}\\[0.6cm]
@@ -90,14 +90,15 @@
     using Israel's Blue Wolf biometric identification program in Hebron as a case study. Building on the preventive 
     repression framework of \citet{dragu2021digital}, we examine how algorithmic classification and risk scoring create
     strategic dynamics between state surveillance apparatus and targeted populations. The analysis suggests that
-    technological advances in surveillance do not reduce ``friction'' as claimed by authorities, but rather create
-    feedback loops that may systematically push toward harsher control policies. We introduce an interpretation suggesting
-    that algorithmic errors and false positives, rather than being bugs to be eliminated, may be tolerated or even strategically 
-    advantageous that serve the underlying political economy of population control. The paper contributes to debates on 
-    algorithmic governance by demonstrating how formal game theory can illuminate the political logic of surveillance systems.
+    technological advances in surveillance create feedback loops that may systematically push toward harsher control policies. 
+    We introduce an interpretation suggesting that algorithmic errors and false positives, rather than being bugs to be eliminated, 
+    are tolerated or even strategically advantageous that serve the underlying political economy of population control. The paper 
+    contributes to debates on algorithmic governance by demonstrating how formal game theory can illuminate the political logic of 
+    surveillance systems.
 
     \vspace{1cm}
-    \noindent\textbf{Keywords:} Algorithmic surveillance; game theory; incomplete information; Israel--Palestine; biometric identification; preventive repression
+    \noindent\textbf{Keywords:} Algorithmic surveillance; game theory; incomplete information; Israel--Palestine; biometric identification; 
+    preventive repression
     \end{minipage}
     
     \vspace*{1.5cm}
@@ -108,32 +109,29 @@
 Algorithmic systems aimed to classify, track, and predict the behavior of populations are deeply debated in democracies, but they are already 
 being in places where people have fewer freedoms. Also when used by authoritarian governments towards population whose rights are limited,
 such technology creates strategic environments. Risk scoring, facial recognition, and movement prediction technologies create continuous games 
-between surveillance authorities and those subjected to monitoring. In fact, the latters might choose to adapt their behaviours to defy such systems, and in turn, the surveillance authorities may be able to learn from the adapted behavious and change their strategy accordingly. This paper asks: How do targets of algorithmic surveillance adapt their behavior? Does this strategic interaction push systems toward harsher policies or systematic errors? And crucially, are such errors tolerated 
-behavior? Does this strategic interaction push systems toward harsher policies or systematic errors? And crucially, are such errors tolerated  or even instrumentalized because they serve broader goals of population control? 
-
-We address these questions through analysis of Israel's Blue Wolf system, a biometric surveillance program deployed by the 
+between surveillance authorities and those subjected to monitoring. In fact, the latters might choose to adapt their behaviours to defy such 
+systems, and in turn, the surveillance authorities may be able to learn from adaptiation and change their strategy accordingly. 
+Therefore, this paper asks: How do targets of algorithmic surveillance adapt their behavior? Does this strategic interaction push systems toward 
+harsher policies and/or systematic errors? And crucially, are such errors tolerated or even instrumentalized because they serve broader goals 
+of population control? We address these questions through analysis of Israel's Blue Wolf system, a biometric surveillance program deployed by the 
 Israeli Defense Forces (IDF) in the occupied West Bank, with particular intensity in Hebron. Blue Wolf combines facial recognition technology, 
-an extensive biographical database (Wolf Pack), and a color-coded risk classification system to enable real-time identification and sorting 
-of Palestinian civilians \citep{dwoskin2021israel, amnesty2023automated}. Israeli authorities have framed these technologies as enabling a 
-`frictionless' control and occupation, reducing invasive checkpoints while maintaining security control, defining the system as 
-`the Facebook of Palestininans', and Hebron as a `Smart City' \citep{dwoskin2021israel}. According to experts, Israel’s use of surveillance and 
-facial recognition appear to be among the most elaborate deployments of such technology by a country seeking to control a subject population 
-\citep{fatafta2017surveillance}. Ethnographic research reveals that Blue Wolf intensifies rather than reduces the violence of occupation, eroding 
-Palestinian social life and private space \citep{goodfriend2023algorithmic}. Moreover, even if Israel is commonly classified as a democracy in 
-terms of electoral institutions, a substantial literature argues that its governance toward Palestinians is characterized by stratified citizenship 
-and coercive control practices consistent with illiberal or authoritarian logics in that domain 
-\citep{jamal2007hollow,smooha2002ethnic,rouhana1997identities,peled2008evolution}.
+an extensive biographical database (Wolf Pack), and a color-coded risk classification system to allow instantaneous identification and sorting 
+of Palestinian civilians \citep{dwoskin2021israel, amnesty2023automated}. Israeli authorities have framed these technologies as fundamental for 
+both enabling a ``frictionless'' security policy, reducing invasive checkpoints while maintaining security control, and for facilitating the 
+occupation, defining the system as ``the Facebook of Palestininans'', and Hebron as a ``Smart City'', unmasking their dual logic of surveillance
+\citep{dwoskin2021israel}. According to experts, Israel’s use of surveillance and facial recognition appear to be among the most advanced 
+deployments of such technology by a country seeking to control a subject population \citep{fatafta2017surveillance}. Ethnographic research reveals 
+that Blue Wolf intensifies rather than reduces the violence of occupation, eroding Palestinian social life and private space 
+\citep{goodfriend2023algorithmic}. 
 
-This paper develops a game-theoretic framework to analyze the strategic logic underlying such systems. Building on \citet{dragu2021digital}'s 
-model of digital authoritarianism and preventive repression, we extend the analysis to incorporate the specific features of algorithmic 
+This work develops a game-theoretic framework to analyze the strategic logic underlying such systems. Building on \citet{dragu2021digital}'s 
+model of digital authoritarianism and preventive repression, we extend their analysis to incorporate the specific features of algorithmic 
 classification as probabilistic identification, systematic errors, and behavioral adaptation by surveilled populations. The formal analysis 
 suggests mechanisms through which algorithmic surveillance can become self-reinforcing, generating dynamics that push toward expanded 
-control regardless of actual security outcomes.
-
-The paper proceeds as follows. Section 2 situates the analysis within literature on algorithmic governance, surveillance studies, 
-and game-theoretic approaches to repression. Section 3 presents the empirical context of Blue Wolf in Hebron. Section 4 develops the 
-formal model. Section 5 analyzes equilibrium behavior and comparative statics. Section 6 discusses policy implications and limitations. Section 7 identifies a venue for this case to be modeled as a signaling game, providing durection for further research. 
-Section 8 provides concluding remarks.
+control regardless of actual security outcomes. The paper proceeds as follows. Section 2 situates the analysis within literature on algorithmic 
+governance, surveillance studies, and game-theoretic approaches to repression. Section 3 presents the empirical context of Blue Wolf in Hebron. 
+Section 4 develops the formal model. Section 5 analyzes equilibrium behavior and comparative statics. Section 6 discusses policy implications 
+and limitations. Section 7 identifies a venue for this case to be modeled as a signaling game, providing durection for further research. 
 
 % 2. THEORETICAL FRAMEWORK
 \section{Theoretical Framework}
@@ -148,18 +146,34 @@ increases with technological development. Third, authoritarian governments prefe
 will strategically allow or block technologies based on their differential effects. We extend this framework in two directions. First, we 
 incorporate incomplete information about individual `threat types', i.e. the fact that the state cannot perfectly distinguish between those who 
 pose a real security threats and ordinary civilians. This generates classification errors with strategic consequences. Second, we model behavioral 
-adaptation by surveilled populations, i.e. changes in movement, communication, and social behavior in response to algorithmic monitoring.
+adaptation by surveilled populations, i.e. changes in movement, communication, and social behavior in response to algorithmic monitoring. 
+It is important to note that, even if Israel is commonly classified as a democracy in terms of electoral institutions, 
+a substantial literature argues that its governance toward Palestinians is characterized by stratified citizenship and coercive control 
+practices consistent with illiberal or authoritarian logics in that domain 
+\citep{dayan2022dualstate,gidron2023crisis,jamal2007hollow,smooha2002ethnic,rouhana1997identities,peled2008evolution}.
+That is why we will consider Israel as an authoritarian state in this setting.
 
 Critical surveillance studies emphasize that algorithmic systems do not simply observe populations but actively constitute them as objects of 
 governance \citep{browne2015dark, benjamin2019race}. Risk scoring and predictive analytics impose categories that shape subsequent treatment, 
 creating what \citet{harcourt2007against} terms `actuarial justice.' In contexts of colonial rule, such systems articulate with longer histories 
 of population management and territorial control \citep{zureik2011colonialism, shalhoub2015security}. \citet{byler2022terror}'s concept of 
-`terror capitalism' illuminates how surveillance technologies serve dual functions: extracting value through data accumulation while facilitating 
-state control over minoritized populations. In the Palestinian context, \citet{goodfriend2023algorithmic} documents how Blue Wolf functions as 
-`algorithmic state violence,' converting the intimate details of daily life into data streams that simultaneously enable capital accumulation  
-within Israeli society and intensify control over Palestinians. Additionally, studies suggest that algorithmic `errors', like false positives and 
-generally misclassifications, may not simply be technical failures to be minimized, but may serve political functions within regimes of population 
-control. A piece of investigative journalism by +972 Magazine explains that in the context of the search and elimination of targets, the Israely army has dramatically expanded their definition of "human target" since October 7, when Hamas-led militants launched a deadly assault on southern Israeli communities (\citeyear{Abraham2024Lavender}). From being a term used to designate senior military operative, which numbered only a few dozen people that could be inspected by intelligence personell and located individually, under “Operation Iron Swords,” the army decided to designate all operatives of Hamas’ military wing as human targets, regardless of their rank or military importance. Being now the number of the targets in the thousands, the IDF recurred to the use of a new AI system, called Lavander, to add people to their 'kill list'. The approval to automatically adopt Lavender’s kill lists was only granted about two weeks into the war, after intelligence manually checked its accurate detection out of a random sample of several hundred targets. Even if Lavander is used in a different context than Blue wolf, this shows that to hunt down security threats, the AI that the army use is highly prone to errors and misclassifications, and gives reasons to believe that the AI used for population control might have similar faults. Additionally, detecting many real security threats would reinforce the counter-terrorism frame that benefits the political goals of Israel and its allies, which suggests that a miscassification might not only be unaccounted for, but even desirable. The literature gives reasons to believe that the IDF misclassifies civilians as real security threats, and might have political interests to do so. The game-theoretic framework developed below formalizes this intuition.
+`terror capitalism' illuminates how surveillance technologies serve dual functions: extracting value (valuable information) through data 
+accumulation while facilitating state control over minoritized populations. In the Palestinian context, \citet{goodfriend2023algorithmic} 
+documents how Blue Wolf is functional to the simultaneous intensification of control over Palestinians and dispossession of their land and 
+resources, while enabling capital accumulation within Israeli society. Additionally, studies suggest that algorithmic 
+`errors' such as misclassifications, may not simply be technical failures to be minimized, but may serve political functions within regimes of population 
+control. Investigative journalism has clarified that in the context of the search and elimination of targets, the 
+Israeli army has dramatically expanded their definition of "human target" since October 7th, when Hamas-led militants launched a deadly assault 
+on southern Israeli communities \citep{abraham2024lavender}. From being a term used to designate senior military operative, under “Operation 
+Iron Swords,” the army decided to designate all operatives of Hamas’ military wing as human targets, regardless of their rank or military 
+importance. Being now the number of the targets in the thousands, the IDF recurred to the use of a new artificial intelligence system, called 
+Lavander, to add people to their 'kill list'. The approval to automatically adopt Lavender’s kill lists was only granted about two weeks into 
+the war, even if the program is relatively highly prone to errors and misclassifications \citep{abraham2024lavender}. This precendent gives reasons to 
+investigate further whether other systems used for population control might have similar faults. Additionally, detecting many real security 
+threats would reinforce the counter-terrorism frame that benefits the political goals of Israel and its allies, which suggests that a 
+miscassification might not only be unaccounted for, but even desirable. The literature gives reasons to believe that the IDF misclassifies 
+civilians as real security threats, and might have political interests to do so. The game-theoretic framework developed below formalizes this 
+intuition.
 
 % 3. EMPIRICAL CONTEXT
 \section{Empirical Context: Blue Wolf in Hebron}
@@ -174,17 +188,16 @@ assigned quotas, reportedly fifty photographs per shift, and competed for prizes
 This gamification of surveillance \citep{benjamin2019playing} transformed military patrols into data harvesting operations, with Palestinian civilians 
 serving as data sources for algorithmic refinement.
 
-Ethnographic research documents how Blue Wolf transforms everyday life in Hebron. The proliferation of checkpoints, cameras, and soldiers 
-equipped with biometric devices means that movement through urban space becomes an ongoing encounter with algorithmic classification, while 
-residents report adapting their behavior: avoiding certain routes, limiting social gatherings, keeping 
-religious garments on inside homes in case soldiers enter \citep{goodfriend2023algorithmic}. Critically, the system's errors generate significant consequences. 
-Such errors, rather than undermining the system's legitimacy, appear absorbed into its operation. The possibility of misclassification may become a 
-mechanism of control, as residents must assume any interaction with soldiers could result in detention regardless of actual behavior. 
-
-Israeli military officials frame Blue Wolf as enabling `frictionless' control, reducing the need for invasive physical searches while maintaining 
-surveillance capacity. Yet the technology's deployment intensifies rather than reduces the intrusiveness of occupation, as data collection 
-requires ongoing encounters between soldiers and civilians, and cameras extend military vision into previously private spaces 
-\citep{amnesty2023automated}.
+Ethnographic research documents how Blue Wolf transforms everyday life in Hebron: movement through the Old City becomes an ongoing encounter 
+with checkpoints, cameras, and soldiers equipped with biometric devices, prompting residents to self-police their mobility and domestic routines. 
+Interviewees describe avoiding monitored thoroughfares and contending with unpredictable stops and scans; at home, surveillance infrastructures 
+installed on rooftops and the possibility of unannounced soldier entry reshape intimate life—some residents report staying inside to be present 
+when soldiers arrive for maintenance, keeping hijabs and “outside” garments on indoors, and even abandoning patios or other semi-private spaces 
+that now feel exposed to cameras. Attempts to create visual barriers (e.g., hanging tarps) are quickly dismantled, underscoring how adaptation 
+is both pervasive and constrained under algorithmic monitoring \citep{goodfriend2023algorithmic}. Critically, the system's errors generate 
+significant consequences. Such errors, rather than undermining the system's legitimacy, appear absorbed into its operation. The possibility of 
+misclassification may become a mechanism of control, as residents must assume any interaction with soldiers could result in detention regardless 
+of actual behavior. 
 
 % 4. THE MODEL
 \section{The Model}
@@ -195,7 +208,7 @@ We model the interaction between a surveillance authority (the Israeli military,
 monitoring (Palestinians in Hebron, denoted $P$). Following \citet{dragu2021digital}, this is a simultaneous-move game where $G$ chooses a 
 level of surveillance effort and $P$ chooses a level of behavioral adaptation.
 
-\textbf{Players and Types.} The population $P$ consists of a continuum of individuals. Each individual $i$ has a private type 
+\textbf{Players and Types.} The population $P$ consists of a set of individuals. Each individual $i$ has a private type 
 $\theta_i \in \{T, N\}$, where $T$ denotes `threat' (e.g. engaged in violent resistance activities) and $N$ denotes `non-threat' 
 (ordinary civilian, e.g. possibly engaged in social and political activities). Let $\lambda \in (0,1)$ denote the prior probability that a 
 randomly selected individual is type $T$. This prior is common knowledge, but individual types are private information.
@@ -215,9 +228,16 @@ limiting social connections, modifying communication patterns, and other behavio
 adaptation reduces the probability of detection. For type $N$ individuals, adaptation may reduce false positive risk but imposes costs on daily 
 life. Let $C_P(a)$ denote the cost of adaptation, increasing and convex in $a$.
 
-\textbf{Probability bounds.} Assume $\pi_T,\pi_N:[0,\bar s]\to[0,1]$ are increasing and concave. 
-Restrict adaptation to $a\in[0,1]$ (so $\bar a\le 1$), so that for all feasible $(s,a)$ we have $s(1-a)\in[0,\bar s]$. 
-Then $\pi_T\!\big(s(1-a_T)\big),\pi_N\!\big(s(1-a_N)\big)\in[0,1]$ for all feasible choices.
+\textbf{Probability bounds.} We interpret $\pi_T(\cdot)$ and $\pi_N(\cdot)$ as probabilities. To ensure they are always well-defined and lie 
+in $[0,1]$, we restrict choices so that the argument of these functions never leaves their domain. Let $\pi_T,\pi_N:[0,\bar s]\to[0,1]$ be 
+increasing and concave. We also bound adaptation to $a_\theta\in[0,1]$ for each type $\theta\in\{T,N\}$. Then for any feasible 
+$(s,a_\theta)$ with $s\in[0,\bar s]$,
+$$
+s(1-a_\theta)\in[0,\bar s],
+$$
+so $\pi_T\!\big(s(1-a_T)\big)$ and $\pi_N\!\big(s(1-a_N)\big)$ are always valid probabilities. In this way, adaptation is modeled as a fractional 
+reduction in ``effective surveillance,'' so it can scale detectability down but cannot make it negative or push the model outside the range 
+where the probability functions are defined.
 
 \subsection{Payoffs}
 
@@ -369,34 +389,36 @@ authorities bear some reputational cost $F$. As a result, even if leadership pre
 toward a regime in which false positives are operationally convenient and politically tolerable. In this interpretation, ``errors as features'' 
 can emerge endogenously from incentive design and institutional structure, not only from explicit political intent.
 
-The most obvious limitation of this model is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
+Our model has also some evident limitations. The first is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
 loops and learning over time. A minimal dynamic extension would allow technology $t$ (or the performance parameters embedded in $\pi_T$ and $\pi_N$) 
 to improve with data volume, and data volume to rise with surveillance intensity $s$. This yields a self-reinforcing escalation of surveillance: 
 higher $s$ generates more data (through increased encounters, images, and registrations), which improves operational capacity and lowers marginal costs, 
 which then sustains or increases $s$ in the next period. This mechanism is consistent with the reported emphasis on data accumulation and the gamification 
 of collection in Hebron \citep{kubovich2022israeli, goodfriend2023algorithmic}. Moreover, the model treats the population as atomistic individuals, 
 abstracting from collective action and organized resistance. Extending the framework to incorporate coordination among surveilled populations would 
-illuminate additional dynamics. Finally, we have not modeled the political economy of technology provision, namely the private firms that profit from 
-developing and deploying surveillance systems. Incorporating this dimension would connect more directly to \citet{byler2022terror}'s framework of 
-terror capitalism.
+illuminate additional dynamics. 
 
-
-% 7. Possible expansion: Signaling Game Interpretation
+% 7. POSSIBLE EXPANSION: Signaling Game Interpretation
 \section{Possible expansion: Signaling Game Interpretation}
-A possible expansion of this model could be to reinterpret the Hebron setting as a signaling game, specifically as an adaptation of the classic Beer--Quiche game. In the traditional Beer--Quiche game, individuals of different types choose between two observable signals (beer or quiche) to convey their type to a receiver who then takes an action based on the observed signal. The sender's type is private information, and the receiver must infer the sender's type from the chosen signal. Within this framework, we can reinterpret the Hebron setting as a signaling environment in which Palestinians are the senders and IDF soldiers operating Blue Wolf are the receivers. Each Palestinian has a private type $\theta \in \{T, N\}$, where $T$ denotes a real security concern, hence a potential terrorist, and $N$ a civilian. Crucially, unlike in the classic model, both types strictly prefer to be classified as ``civilian'' rather than ``terrorist,'' because any terrorist classification leads to detention, harassment, or long-term consequences in the database. Observable signals include participation in protests, dense social networks, movement patterns, or other behaviors that are algorithmically encoded as risk factors. Soldiers, aided by Blue Wolf, map these signals into a binary action: classify and treat the individual as terrorist (red/yellow) or civilian (green).
+A possible expansion of this model could be to reinterpret the Hebron setting as a signaling game, specifically as an adaptation of the classic 
+Beer--Quiche game. In the traditional Beer--Quiche game, individuals of different types choose between two observable signals (beer or quiche) 
+to convey their type to a receiver who then takes an action based on the observed signal. The sender's type is private information, and the 
+receiver must infer the sender's type from the chosen signal. Within this framework, we can reinterpret the Hebron setting as a signaling 
+environment in which Palestinians are the senders and IDF soldiers operating Blue Wolf are the receivers. Each Palestinian has a private 
+type $\theta \in \{T, N\}$, where $T$ denotes a real security concern, hence a potential terrorist, and $N$ a civilian. Crucially, unlike in 
+the classic model, both types strictly prefer to be classified as ``civilian'' rather than ``terrorist,'' because any terrorist classification 
+leads to detention, harassment, or long-term consequences in the database. Observable signals include participation in protests, dense social 
+networks, movement patterns, or other behaviors that are algorithmically encoded as risk factors. Soldiers, aided by Blue Wolf, map these 
+signals into a binary action: classify and treat the individual as terrorist (red/yellow) or civilian (green).
 
-In a standard Beer--Quiche setup, equilibrium often hinges on one type having a differential taste for a costly signal (e.g., tough types liking beer more), which can sustain a separating equilibrium. Here, however, protest or politically salient behavior is costly for both types once it is surveilled, because the algorithm increases the probability of terrorist classification regardless of $\theta$. This pushes the game toward pooling on low-risk signals, with both $T$ and $N$ types strategically avoiding protest or visible dissent---precisely the self-disciplining adaptation highlighted by our model. From the soldiers' perspective, the algorithm acts like an imprecise decoding rule that sometimes classifies $N$ as $T$. When such false positives are politically instrumental (high $\alpha$), the receiver is effectively rewarded for treating many signals as evidence of terrorism, which as in the model we tackled in the previous sections, shrinks the range of behaviors that can safely function as ``civilian'' signals and reinforcing a pooling equilibrium of widespread self-silencing among civilians.
-
-% 8. CONCLUSION
-\section{Conclusion}
-
-This paper has developed a game-theoretic framework to analyze algorithmic surveillance systems, using Israel's Blue Wolf program in Hebron as an 
-empirical case. Extending \citet{dragu2021digital}'s model of preventive repression to incorporate incomplete information about individual types 
-and political instrumentalization of classification errors, we have shown that technological improvement in surveillance consistently expands 
-control, that errors may enhance rather than undermine surveillance effectiveness, and that welfare losses fall disproportionately on innocent 
-civilians who must adapt their behavior to algorithmic uncertainty. The analysis contributes to algorithmic game theory by demonstrating how 
-formal modeling can illuminate the political logic of surveillance systems. It contributes to debates on algorithmic governance by showing that 
-technical accuracy is an insufficient criterion for evaluating systems deployed in contexts of political domination. 
+In a standard Beer--Quiche setup, equilibrium often hinges on one type having a differential taste for a costly signal (e.g., tough types liking 
+beer more), which can sustain a separating equilibrium. Here, however, protest or politically salient behavior is costly for both types once it 
+is surveilled, because the algorithm increases the probability of terrorist classification regardless of $\theta$. This pushes the game toward 
+pooling on low-risk signals, with both $T$ and $N$ types strategically avoiding protest or visible dissent. From the soldiers' perspective, 
+the algorithm acts like an imprecise decoding rule that sometimes classifies $N$ as $T$. When such false positives are politically instrumental 
+(high $\alpha$), the receiver is effectively rewarded for treating many signals as evidence of terrorism, which as in the model we tackled in 
+the previous sections, shrinks the range of behaviors that can safely function as ``civilian'' signals and reinforcing a pooling equilibrium 
+of widespread self-silencing among civilians.
 
 % REFERENCES
 \newpage
@@ -406,93 +428,105 @@ technical accuracy is an insufficient criterion for evaluating systems deployed 
 
 \bibitem[Amnesty International, 2023]{amnesty2023automated}
 Amnesty International. (2023).
-\newblock Automated Apartheid: How Facial Recognition Fragments, Segregates and Controls Palestinians in the OPT.
-\newblock Technical report, Amnesty International.
+\newblock \emph{Automated apartheid: How facial recognition fragments, segregates and controls Palestinians in the OPT}.
+\newblock Amnesty International. Retrieved from \url{https://www.amnesty.org/en/documents/mde15/6701/2023/en/}
 
 \bibitem[Abraham, 2024]{abraham2024lavender}
-Abraham, Y. (2024).
+Abraham, Y. (2024, April 3).
 \newblock `Lavender': The AI machine directing Israel's bombing spree in Gaza.
-\newblock +972 Magazine, April 3, 2024. Retrieved from \url{https://www.972mag.com/lavender-ai-israeli-army-gaza/}
+\newblock \emph{+972 Magazine}. Retrieved from \url{https://www.972mag.com/lavender-ai-israeli-army-gaza/}
 
-\bibitem[Benjamin, 2019]{benjamin2019race}
+\bibitem[Benjamin, 2019a]{benjamin2019race}
 Benjamin, R. (2019).
-\newblock {\em Race After Technology: Abolitionist Tools for the New Jim Code}.
-\newblock Cambridge: Polity Press.
+\newblock \emph{Race after technology: Abolitionist tools for the new Jim Code}.
+\newblock Polity Press.
 
-\bibitem[Benjamin, 2019]{benjamin2019playing}
+\bibitem[Benjamin, 2019b]{benjamin2019playing}
 Benjamin, G. (2019).
-\newblock Playing at Control: Writing Surveillance in/for Gamified Society.
-\newblock {\em Surveillance \& Society}, 17(5): 699–713.
+\newblock Playing at control: Writing surveillance in/for gamified society.
+\newblock \emph{Surveillance \& Society, 17}(5), 699--713.
 
 \bibitem[Browne, 2015]{browne2015dark}
 Browne, S. (2015).
-\newblock {\em Dark Matters: On the Surveillance of Blackness}.
-\newblock Durham: Duke University Press.
+\newblock \emph{Dark matters: On the surveillance of Blackness}.
+\newblock Duke University Press.
 
 \bibitem[Byler, 2022]{byler2022terror}
 Byler, D. (2022).
-\newblock {\em Terror Capitalism: Uyghur Dispossession and Masculinity in a Chinese City}.
-\newblock Durham: Duke University Press.
+\newblock \emph{Terror capitalism: Uyghur dispossession and masculinity in a Chinese city}.
+\newblock Duke University Press.
+
+\bibitem[Dayan, 2022]{dayan2022dualstate}
+Dayan, H. (2022).
+\newblock Israel/Palestine: Authoritarian practices in the context of a dual state crisis.
+\newblock In O.~Topak, M.~Mekouar, \& F.~Cavatorta (Eds.), \emph{New authoritarian practices in the Middle East and North Africa} (pp.~131--151).
+\newblock Edinburgh University Press.
 
 \bibitem[Dragu and Lupu, 2021]{dragu2021digital}
-Dragu, T. and Lupu, Y. (2021).
-\newblock Digital Authoritarianism and the Future of Human Rights.
-\newblock {\em International Organization}, 75(4):991--1017.
+Dragu, T., \& Lupu, Y. (2021).
+\newblock Digital authoritarianism and the future of human rights.
+\newblock \emph{International Organization, 75}(4), 991--1017.
 
 \bibitem[Dwoskin, 2021]{dwoskin2021israel}
-Dwoskin, E. (2021).
-\newblock Israel Escalates Surveillance of Palestinians with Facial Recognition Program in West Bank.
-\newblock {\em Washington Post}, November 8.
+Dwoskin, E. (2021, November 8).
+\newblock Israel escalates surveillance of Palestinians with facial recognition program in West Bank.
+\newblock \emph{The Washington Post}. Retrieved from \url{https://www.washingtonpost.com/world/middle_east/israel-palestinians-surveillance-facial-recognition/2021/11/05/3787bf42-26b2-11ec-8739-5cb6aba30a30_story.html}
 
 \bibitem[Fatafta and Nashif, 2017]{fatafta2017surveillance}
-Fatafta, M. and Nashif, N. (2017).
-\newblock Surveillance of Palestinians and the Fight for Digital Rights.
-\newblock {\em Policy Brief}. Al-Shabaka: The Palestinian Policy Network, October 23, 2017. 
+Fatafta, M., \& Nashif, N. (2017, October 23).
+\newblock Surveillance of Palestinians and the fight for digital rights (Policy brief).
+\newblock \emph{Al-Shabaka: The Palestinian Policy Network}. Retrieved from \url{https://al-shabaka.org/briefs/surveillance-of-palestinians-and-the-fight-for-digital-rights/}
+
+\bibitem[Gidron, 2023]{gidron2023crisis}
+Gidron, N. (2023).
+\newblock Why Israeli democracy is in crisis.
+\newblock \emph{Journal of Democracy, 34}(3), 33--45.
 
 \bibitem[Goodfriend, 2023]{goodfriend2023algorithmic}
 Goodfriend, S. (2023).
-\newblock Algorithmic State Violence: Automated Surveillance and Palestinian Dispossession in Hebron's Old City.
-\newblock {\em International Journal of Middle East Studies}, 55:461--478.
+\newblock Algorithmic state violence: Automated surveillance and Palestinian dispossession in Hebron's Old City.
+\newblock \emph{International Journal of Middle East Studies, 55}, 461--478.
 
 \bibitem[Harcourt, 2007]{harcourt2007against}
 Harcourt, B. (2007).
-\newblock {\em Against Prediction: Profiling, Policing, and Punishing in an Actuarial Age}.
-\newblock Chicago: University of Chicago Press.
+\newblock \emph{Against prediction: Profiling, policing, and punishing in an actuarial age}.
+\newblock University of Chicago Press.
 
 \bibitem[Jamal, 2007]{jamal2007hollow}
 Jamal, A. (2007).
-\newblock Nationalizing States and the Constitution of ``Hollow Citizenship'': Israel and its Palestinian Citizens.
-\newblock {\em Ethnopolitics}, 6(4): 471--493. 
+\newblock Nationalizing states and the constitution of ``hollow citizenship'': Israel and its Palestinian citizens.
+\newblock \emph{Ethnopolitics, 6}(4), 471--493.
 
 \bibitem[Kubovich, 2022]{kubovich2022israeli}
-Kubovich, Y. (2022).
-\newblock Israeli Troops' New Quota: Add 50 Palestinians to Tracking Database Every Shift.
-\newblock {\em Haaretz}, March 24.
+Kubovich, Y. (2022, March 24).
+\newblock Israeli troops' new quota: Add 50 Palestinians to tracking database every shift.
+\newblock \emph{Haaretz}. Retrieved from \url{https://www.haaretz.com/israel-news/2022-03-24/ty-article/.premium/soldiers-not-allowed-off-shifts-until-they-enter-50-palestinian-names-in-database/00000180-5ba7-d97e-a7fb-7bf7361c0000}
 
 \bibitem[Shalhoub-Kevorkian, 2015]{shalhoub2015security}
 Shalhoub-Kevorkian, N. (2015).
-\newblock {\em Security Theology, Surveillance and the Politics of Fear}.
-\newblock Cambridge: Cambridge University Press.
+\newblock \emph{Security theology, surveillance and the politics of fear}.
+\newblock Cambridge University Press.
 
 \bibitem[Smooha, 2002]{smooha2002ethnic}
 Smooha, S. (2002).
 \newblock The model of ethnic democracy: Israel as a Jewish and democratic state.
-\newblock {\em Nations and Nationalism}, 8(4): 475--503. 
+\newblock \emph{Nations and Nationalism, 8}(4), 475--503.
 
 \bibitem[Rouhana, 1997]{rouhana1997identities}
 Rouhana, N.~N. (1997).
-\newblock {\em Palestinian Citizens in an Ethnic Jewish State: Identities in Conflict}.
-\newblock New Haven, CT: Yale University Press. 
+\newblock \emph{Palestinian citizens in an ethnic Jewish state: Identities in conflict}.
+\newblock Yale University Press.
 
 \bibitem[Peled, 2008]{peled2008evolution}
 Peled, Y. (2008).
-\newblock The evolution of Israeli citizenship: an overview.
-\newblock {\em Citizenship Studies}, 12(3): 335--345. 
+\newblock The evolution of Israeli citizenship: An overview.
+\newblock \emph{Citizenship Studies, 12}(3), 335--345.
 
 \bibitem[Zureik, 2011]{zureik2011colonialism}
 Zureik, E. (2011).
-\newblock Colonialism, Surveillance, and Population Control: Israel/Palestine.
-\newblock In Zureik, E., Lyon, D., and Abu-Laban, Y., editors, {\em Surveillance and Control in Israel/Palestine}. London: Routledge.
+\newblock Colonialism, surveillance, and population control: Israel/Palestine.
+\newblock In E.~Zureik, D.~Lyon, \& Y.~Abu-Laban (Eds.), \emph{Surveillance and control in Israel/Palestine}.
+\newblock Routledge.
 
 \end{thebibliography}
 \end{document}
