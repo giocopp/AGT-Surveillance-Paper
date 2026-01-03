@@ -3,8 +3,6 @@
 % Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{microtype}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{geometry}
@@ -89,12 +87,11 @@
     This paper models algorithmic surveillance as a strategic game of incomplete information,
     using Israel's Blue Wolf biometric identification program in Hebron as a case study. Building on the preventive 
     repression framework of \citet{dragu2021digital}, we examine how algorithmic classification and risk scoring create
-    strategic dynamics between state surveillance apparatus and targeted populations. The analysis suggests that
-    technological advances in surveillance create feedback loops that may systematically push toward harsher control policies. 
-    We introduce an interpretation suggesting that algorithmic errors and false positives, rather than being bugs to be eliminated, 
-    are tolerated or even strategically advantageous, and may serve the underlying political economy of population control. The paper 
-    contributes to debates on algorithmic governance by demonstrating how formal game theory can illuminate the political logic of 
-    surveillance systems.
+    strategic dynamics between state surveillance apparatus and targeted populations. The analysis suggests a mechanism through which
+    technological advances in surveillance can be associated with systematically harsher control policies. 
+    We introduce an interpretation suggesting that algorithmic errors and false positives may be tolerated or even strategically 
+    advantageous under certain political objectives. The paper contributes to debates on algorithmic governance by demonstrating 
+    how formal game theory can illuminate the political logic of surveillance systems.
 
     \vspace{1cm}
     \noindent\textbf{Keywords:} Algorithmic surveillance; game theory; incomplete information; Israel--Palestine; biometric identification; 
@@ -106,11 +103,11 @@
 
 % 1. INTRODUCTION
 \section{Introduction}
-Algorithmic systems aimed to classify, track, and predict the behavior of populations are deeply debated in democracies, but they are already 
-being in places where people have fewer freedoms. When used by authoritarian governments towards population whose rights are limited,
+Algorithmic systems aimed at classifying, tracking, and predicting the behavior of populations are deeply debated in democracies, but they are already 
+in place where people have fewer freedoms. When used by authoritarian governments toward populations whose rights are limited,
 such technology creates strategic environments. Risk scoring, facial recognition, and movement prediction technologies create continuous games 
-between surveillance authorities and those subjected to monitoring. In fact, the latters might choose to adapt their behaviours to defy such 
-systems, and in turn, the surveillance authorities may be able to learn from adaptiation and change their strategy accordingly. 
+between surveillance authorities and those subjected to monitoring. In fact, the latter might choose to adapt their behavior to defy such 
+systems, and in turn, the surveillance authorities may be able to learn from adaptation and change their strategy accordingly. 
 Therefore, this paper asks: How do targets of algorithmic surveillance adapt their behavior? Does this strategic interaction push systems toward 
 harsher policies and/or systematic errors? And crucially, are such errors tolerated or even instrumentalized because they serve broader goals 
 of population control? We address these questions through analysis of Israel's Blue Wolf system, a biometric surveillance program deployed by the 
@@ -118,20 +115,24 @@ Israeli Defense Forces (IDF) in the occupied West Bank, with particular intensit
 an extensive biographical database (Wolf Pack), and a color-coded risk classification system to allow instantaneous identification and sorting 
 of Palestinian civilians \citep{dwoskin2021israel, amnesty2023automated}. Israeli authorities have framed these technologies as fundamental for 
 both enabling a ``frictionless'' security policy, reducing invasive checkpoints while maintaining security control, and for facilitating the 
-occupation, defining the system as ``the Facebook of Palestininans'', and Hebron as a ``Smart City'', unmasking their dual logic of surveillance
-\citep{dwoskin2021israel}. According to experts, Israel’s use of surveillance and facial recognition appear to be among the most advanced 
+occupation, defining the system as ``the Facebook of Palestinians'' and Hebron as a ``Smart City,'' highlighting their dual logic of 
+surveillance \citep{dwoskin2021israel}. According to experts, Israel's use of facial recognition is often described as among the most advanced 
 deployments of such technology by a country seeking to control a subject population \citep{fatafta2017surveillance}. Ethnographic research reveals 
 that Blue Wolf intensifies rather than reduces the violence of occupation, eroding Palestinian social life and private space 
-\citep{goodfriend2023algorithmic}. 
+\citep{goodfriend2023algorithmic}. It is important to note that, even if Israel is commonly classified as a democracy in terms of electoral 
+institutions, a substantial literature argues that its governance toward Palestinians is characterized by stratified citizenship and coercive 
+control practices consistent with illiberal or authoritarian logics 
+\citep{dayan2022dualstate,gidron2023crisis,jamal2007hollow,smooha2002ethnic,rouhana1997identities,peled2008evolution}.
 
 This work develops a game-theoretic framework to analyze the strategic logic underlying such systems. Building on \citet{dragu2021digital}'s 
-model of digital authoritarianism and preventive repression, we extend their analysis to incorporate the specific features of algorithmic 
-classification as probabilistic identification, systematic errors, and behavioral adaptation by surveilled populations. The formal analysis 
-suggests mechanisms through which algorithmic surveillance can become self-reinforcing, generating dynamics that push toward expanded 
-control regardless of actual security outcomes. The paper proceeds as follows. Section 2 situates the analysis within literature on algorithmic 
-governance, surveillance studies, and game-theoretic approaches to repression. Section 3 presents the empirical context of Blue Wolf in Hebron. 
-Section 4 develops the formal model. Section 5 analyzes equilibrium behavior and comparative statics. Section 6 discusses policy implications 
-and limitations. Section 7 identifies a venue for this case to be modeled as a signaling game, providing direction for further research. 
+model of digital authoritarianism and preventive repression, we extend their analysis to incorporate algorithmic classification as probabilistic 
+identification, systematic errors, and behavioral adaptation by surveilled populations. In our static setting, the model highlights an escalation 
+mechanism: improvements in surveillance capacity raise the incentives to monitor, while simultaneously inducing costly adaptation by the targeted 
+population, sustaining pressure toward expanded control even when the prevalence of genuine threats is low. The paper proceeds as follows. 
+Section 2 situates the analysis within the relevant literature. 
+Section 3 presents the empirical context of Blue Wolf in Hebron. Section 4 develops the formal model. Section 5 analyzes equilibrium behavior 
+and comparative statics. Section 6 discusses policy implications and limitations. Section 7 identifies a venue for this case to be modeled as 
+a signaling game, providing direction for further research. 
 
 % 2. THEORETICAL FRAMEWORK
 \section{Theoretical Framework}
@@ -144,14 +145,9 @@ also benefits opposition groups. Three results from their analysis are particula
 increases government preventive repression in equilibrium. Second, the probability that government successfully prevents opposition mobilization 
 increases with technological development. Third, authoritarian governments prefer technologies that reduce the cost of preventive control and
 will strategically allow or block technologies based on their differential effects. We extend this framework in two directions. First, we 
-incorporate incomplete information about individual `threat types', i.e. the fact that the state cannot perfectly distinguish between those who 
-pose a real security threats and ordinary civilians. This generates classification errors with strategic consequences. Second, we model behavioral 
-adaptation by surveilled populations, i.e. changes in movement, communication, and social behavior in response to algorithmic monitoring. 
-It is important to note that, even if Israel is commonly classified as a democracy in terms of electoral institutions, 
-a substantial literature argues that its governance toward Palestinians is characterized by stratified citizenship and coercive control 
-practices consistent with illiberal or authoritarian logics in that domain 
-\citep{dayan2022dualstate,gidron2023crisis,jamal2007hollow,smooha2002ethnic,rouhana1997identities,peled2008evolution}.
-That is why we will consider Israel as an authoritarian state in this setting.
+incorporate incomplete information about individual `threat types,' i.e., the fact that the state cannot perfectly distinguish between those who 
+pose real security threats and ordinary civilians. This generates classification errors with strategic consequences. Second, we model behavioral 
+adaptation by surveilled populations, i.e., changes in movement, communication, and social behavior in response to algorithmic monitoring. 
 
 Critical surveillance studies emphasize that algorithmic systems do not simply observe populations but actively constitute them as objects of 
 governance \citep{browne2015dark, benjamin2019race}. Risk scoring and predictive analytics impose categories that shape subsequent treatment, 
@@ -161,26 +157,26 @@ of population management and territorial control \citep{zureik2011colonialism, s
 accumulation while facilitating state control over minoritized populations. In the Palestinian context, \citet{goodfriend2023algorithmic} 
 documents how Blue Wolf is functional to the simultaneous intensification of control over Palestinians and dispossession of their land and 
 resources, while enabling capital accumulation within Israeli society. Additionally, studies suggest that algorithmic 
-`errors' such as misclassifications, may not simply be technical failures to be minimized, but may serve political functions within regimes of population 
+`errors,' such as misclassifications, may not simply be technical failures to be minimized, but may serve political functions within regimes of population 
 control. Investigative journalism has clarified that in the context of the search and elimination of targets, the 
-Israeli army has dramatically expanded their definition of "human target" since October 7th, when Hamas-led militants launched a deadly assault 
-on southern Israeli communities \citep{abraham2024lavender}. From being a term used to designate senior military operative, under “Operation 
-Iron Swords,” the army stated to designate all operatives of Hamas’ military wing as human targets, irrespective of their rank or military 
-importance. Being now the number of the targets in the thousands, the IDF recurred to the use of a new artificial intelligence system, called 
-Lavander, to add people to their 'kill list'. The approval to automatically adopt Lavender’s kill lists was only granted about two weeks into 
-the war, even if the program is relatively highly prone to errors and misclassifications \citep{abraham2024lavender}. This precendent gives reasons to 
+Israeli army has dramatically expanded its definition of ``human target'' since October 7th, when Hamas-led militants launched a deadly assault 
+on southern Israeli communities \citep{abraham2024lavender}. From being a term used to designate senior military operatives, under ``Operation 
+Iron Swords,'' the army started to designate all operatives of Hamas's military wing as human targets, irrespective of their rank or military 
+importance. Being now the number of targets in the thousands, the IDF recurred to the use of a new artificial intelligence system, called 
+Lavender, to add people to their `kill list.' The approval to automatically adopt Lavender's kill lists was only granted about two weeks into 
+the war, even if the program is relatively highly prone to errors and misclassifications \citep{abraham2024lavender}. This precedent gives reasons to 
 investigate further whether other systems used for population control might have similar faults. Additionally, detecting many real security 
 threats would reinforce the counter-terrorism frame that benefits the political goals of Israel and its allies, which suggests that a 
-miscassification might not only be unaccounted for, but even desirable. The literature gives reasons to believe that the IDF misclassifies 
-civilians as real security threats, and might have political interests to do so. The game-theoretic framework developed below formalizes this 
-intuition.
+misclassification might not only be unaccounted for, but even desirable. The literature gives reasons to believe that misclassification is not 
+fully disciplined by institutional incentives and may persist because it may align with broader political interests. The game-theoretic 
+framework developed below formalizes this intuition.
 
 % 3. EMPIRICAL CONTEXT
 \section{Empirical Context: Blue Wolf in Hebron}
 
 Blue Wolf is a mobile application deployed by the IDF that allows soldiers to identify Palestinians through facial recognition and biometric 
 matching. The system connects to Wolf Pack, a database containing biographical information, family histories, employment records, and assigned 
-security ratings for Palestinians across the West Bank. The program is paralleled by Red Wolf, that extends this system to automated facial recognition 
+security ratings for Palestinians across the West Bank. The program is paralleled by Red Wolf, which extends this system to automated facial recognition 
 at checkpoints in the West Bank. In the context of Blue Wolf, when a soldier photographs a Palestinian, the app retrieves their profile and displays a 
 color-coded risk assessment: 
 red (detain), yellow (delay for further questioning), or green (release). The system's development relied on intensive data collection. Soldiers were 
@@ -191,8 +187,8 @@ serving as data sources for algorithmic refinement.
 Ethnographic research documents how Blue Wolf transforms everyday life in Hebron: movement through the Old City becomes an ongoing encounter 
 with checkpoints, cameras, and soldiers equipped with biometric devices, prompting residents to self-police their mobility and domestic routines. 
 Interviewees describe avoiding monitored thoroughfares and contending with unpredictable stops and scans; at home, surveillance infrastructures 
-installed on rooftops and the possibility of unannounced soldier entry reshape intimate life—some residents report staying inside to be present 
-when soldiers arrive for maintenance, keeping hijabs and “outside” garments on indoors, and even abandoning patios or other semi-private spaces 
+installed on rooftops and the possibility of unannounced soldier entry reshape intimate life. Some residents report staying inside to be present 
+when soldiers arrive for maintenance, keeping hijabs and ``outside'' garments on indoors, and even abandoning patios or other semi-private spaces 
 that now feel exposed to cameras. Attempts to create visual barriers (e.g., hanging tarps) are quickly dismantled, underscoring how adaptation 
 is both pervasive and constrained under algorithmic monitoring \citep{goodfriend2023algorithmic}. Critically, the system's errors generate 
 significant consequences. Such errors, rather than undermining the system's legitimacy, appear absorbed into its operation. The possibility of 
@@ -209,8 +205,8 @@ monitoring (Palestinians in Hebron, denoted $P$). Following \citet{dragu2021digi
 level of surveillance effort and $P$ chooses a level of behavioral adaptation.
 
 \textbf{Players and Types.} The population $P$ consists of a set of individuals. Each individual $i$ has a private type 
-$\theta_i \in \{T, N\}$, where $T$ denotes `threat' (e.g. engaged in violent resistance activities) and $N$ denotes `non-threat' 
-(ordinary civilian, e.g. possibly engaged in social and political activities). Let $\lambda \in (0,1)$ denote the prior probability that a 
+$\theta_i \in \{T, N\}$, where $T$ denotes `threat' (e.g., engaged in violent resistance activities) and $N$ denotes `non-threat' 
+(ordinary civilian, e.g., possibly engaged in social and political activities). Let $\lambda \in (0,1)$ denote the prior probability that a 
 randomly selected individual is type $T$. This prior is common knowledge, but individual types are private information.
 
 \textbf{Government Action.} The government chooses surveillance intensity $s \in [0, \bar{s}]$, which determines the probability of detecting 
@@ -223,7 +219,7 @@ positives among non-threats. Let:
 Both functions are increasing in $s$, with $\pi_T(s) > \pi_N(s)$ for all $s > 0$ (the system performs better than random). The cost of 
 surveillance is $C_G(s,t)$, decreasing in technology level $t$.
 
-\textbf{Population Response.} Individuals choose adaptation effort $a \in [0, \bar{a}]$. As seen in the literature, adaptation includes avoiding monitored areas, 
+\textbf{Population Response.} Individuals choose adaptation effort $a_\theta \in [0, \bar{a}]$. As seen in the literature, adaptation includes avoiding monitored areas, 
 limiting social connections, modifying communication patterns, and other behavioral changes that reduce detectability. For type $T$ individuals, 
 adaptation reduces the probability of detection. For type $N$ individuals, adaptation may reduce false positive risk but imposes costs on daily 
 life, such as the shrinking of their private spaces. Let $C_P(a)$ denote the cost of adaptation, increasing and convex in $a$.
@@ -270,8 +266,8 @@ simultaneously; each individual observes their own type $\theta\in\{T,N\}$, but 
 \begin{definition}[Bayesian Nash equilibrium conditional on technology]
 Fix $t$. A Bayesian Nash equilibrium of the Stage 1 game induced by $t$ is a triple $(s^*(t),a_T^*(t),a_N^*(t))$ such that:
 \begin{enumerate}[label=(\roman*), nosep]
-    \item $s^*(t)$ maximizes the government’s expected payoff given $(a_T^*(t),a_N^*(t))$;
-    \item for each type $\theta\in\{T,N\}$, $a_\theta^*(t)$ maximizes that type’s expected payoff given $s^*(t)$.
+    \item $s^*(t)$ maximizes the government's expected payoff given $(a_T^*(t),a_N^*(t))$;
+    \item for each type $\theta\in\{T,N\}$, $a_\theta^*(t)$ maximizes that type's expected payoff given $s^*(t)$.
 \end{enumerate}
 \end{definition}
 
@@ -312,9 +308,8 @@ detected or falsely flagged, raising incentives to adapt, while adaptation reduc
 in $\pi_\theta(\cdot)$, shaping the government's optimal surveillance choice. 
 
 \begin{proposition}[Technology Increases Surveillance]
-In equilibrium, surveillance intensity $s^*$ is increasing in technology level $t$. This result holds regardless of how technology affects the 
-population's adaptation costs.
-\end{proposition}
+    In equilibrium, surveillance intensity $s^*$ is increasing in technology level $t$ (holding the population cost function $C_P$ fixed).
+\end{proposition}    
 
 This extends \citet{dragu2021digital}'s core finding to the incomplete information setting. As technology reduces the cost of surveillance, the 
 government optimally expands monitoring even when the population adapts in response. The strategic interaction between surveillance and adaptation 
@@ -339,8 +334,8 @@ Expected utility of both type $T$ and type $N$ individuals is decreasing in tech
 
 A higher $t$ induces higher equilibrium surveillance, increasing both true-positive detection of type $T$ and false-positive flagging of type 
 $N$, while also increasing incentives to invest in costly adaptation. A higher $\alpha$ further strengthens the government's incentive to expand 
-surveillance even when it produces false positives, worsening expected outcomes for non-threats in particular. The welfare result reveals the 
-distributive politics of algorithmic surveillance. Technological `improvement' makes everyone in the surveilled population worse off: 
+surveillance even when it produces false positives, worsening expected outcomes for non-threats in particular. Under the model's assumptions, 
+equilibrium welfare for both types weakly decreases with surveillance capability, and may decline strictly in typical cases: 
 type $T$ individuals face higher detection probability, while type $N$ individuals face more frequent false positives and 
 must expend more resources on adaptation. The burden falls disproportionately on non-threats, who gain nothing from successful evasion but bear 
 costs of both flagging and adaptation. Moreover, when $\alpha > 0$, the welfare calculus becomes zero-sum between government and population. 
@@ -352,7 +347,7 @@ in which algorithmic surveillance in contexts like Hebron constitutes what \cite
 
 The strategic interaction between surveillance and adaptation ensures that technological improvement does not reduce the intrusiveness of control 
 but rather shifts its form. In equilibrium, as surveillance technology improves, the population adapts more intensively. This adaptation, including 
-avoiding certain areas, limiting social connections, modifying daily routines, represents a diffuse form of control that operates through self-discipline 
+avoiding certain areas, limiting social connections, and modifying daily routines, represents a diffuse form of control that operates through self-discipline 
 rather than direct coercion. Standard discussions of algorithmic governance treat errors as problems to be minimized through better data and improved 
 algorithms. The analysis here suggests a different interpretation: when surveillance serves political functions beyond security, errors may become features 
 that enhance rather than undermine the system's effectiveness. In our model, the government's net payoff weight on false positives is
@@ -389,9 +384,9 @@ authorities bear some reputational cost $F$. As a result, even if leadership pre
 toward a regime in which false positives are operationally convenient and politically tolerable. In this interpretation, ``errors as features'' 
 can emerge endogenously from incentive design and institutional structure, not only from explicit political intent.
 
-Our model has also some evident limitations. The first is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
+Our model also has some evident limitations. The first is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
 loops and learning over time. A minimal dynamic extension would allow technology $t$ (or the performance parameters embedded in $\pi_T$ and $\pi_N$) 
-to improve with data volume, and data volume to rise with surveillance intensity $s$. This yields a self-reinforcing escalation of surveillance: 
+to improve with data volume, and data volume to rise with surveillance intensity $s$. This might yield a self-reinforcing escalation of surveillance: 
 higher $s$ generates more data (through increased encounters, images, and registrations), which improves operational capacity and lowers marginal costs, 
 which then sustains or increases $s$ in the next period. This mechanism is consistent with the reported emphasis on data accumulation and the gamification 
 of collection in Hebron \citep{kubovich2022israeli, goodfriend2023algorithmic}. Moreover, the model treats the population as atomistic individuals, 
@@ -399,26 +394,104 @@ abstracting from collective action and organized resistance. Extending the frame
 illuminate additional dynamics. 
 
 % 7. POSSIBLE EXPANSION: Signaling Game Interpretation
-\section{Possible expansion: Signaling Game Interpretation}
+\section{Possible Expansion: Signaling Game Interpretation}
 A possible expansion of this model could be to reinterpret the Hebron setting as a signaling game, specifically as an adaptation of the classic 
 Beer--Quiche game. In the traditional Beer--Quiche game, individuals of different types choose between two observable signals (beer or quiche) 
 to convey their type to a receiver who then takes an action based on the observed signal. The sender's type is private information, and the 
 receiver must infer the sender's type from the chosen signal. Within this framework, we can reinterpret the Hebron setting as a signaling 
 environment in which Palestinians are the senders and IDF soldiers operating Blue Wolf are the receivers. Each Palestinian has a private 
-type $\theta \in \{T, N\}$, where $T$ denotes a real security concern, hence a potential terrorist, and $N$ a civilian. Crucially, unlike in 
-the classic model, both types strictly prefer to be classified as ``civilian'' rather than ``terrorist,'' because any terrorist classification 
-leads to detention, harassment, or long-term consequences in the database. Observable signals include participation in protests, dense social 
-networks, movement patterns, or other behaviors that are algorithmically encoded as risk factors. Soldiers, aided by Blue Wolf, map these 
-signals into a binary action: classify and treat the individual as terrorist (red/yellow) or civilian (green).
+type $\theta \in \{T, N\}$, where $T$ denotes a real security threat type (as defined by the classification system), and $N$ a civilian 
+(non-threat). Crucially, unlike in the classic model, both types strictly prefer to be classified as ``civilian'' 
+rather than ``security threat,'' because 
+any threat classification leads to detention, harassment, or long-term consequences in the database. Observable signals include participation 
+in protests, dense social networks, movement patterns, or other behaviors that are algorithmically encoded as risk factors. Soldiers, aided by 
+Blue Wolf, map these signals into a binary action: classify and treat the individual as security threat (red/yellow) or civilian (green).
 
 In a standard Beer--Quiche setup, equilibrium often hinges on one type having a differential taste for a costly signal (e.g., tough types liking 
 beer more), which can sustain a separating equilibrium. Here, however, protest or politically salient behavior is costly for both types once it 
-is surveilled, because the algorithm increases the probability of terrorist classification regardless of $\theta$. This pushes the game toward 
-pooling on low-risk signals, with both $T$ and $N$ types strategically avoiding protest or visible dissent. From the soldiers' perspective, 
+is surveilled, because the algorithm increases the probability of security threat classification regardless of $\theta$. 
+This pushes the game toward pooling on low-risk signals, with both $T$ and $N$ types strategically avoiding protest or visible dissent. 
+From the soldiers' perspective, 
 the algorithm acts like an imprecise decoding rule that sometimes classifies $N$ as $T$. When such false positives are politically instrumental 
-(high $\alpha$), the receiver is effectively rewarded for treating many signals as evidence of terrorism, which as in the model we tackled in 
-the previous sections, shrinks the range of behaviors that can safely function as ``civilian'' signals and reinforcing a pooling equilibrium 
+(high $\alpha$), the receiver is effectively rewarded for treating many signals as evidence of terrorism, which, as in the model we tackled in 
+the previous sections, shrinks the range of behaviors that can safely function as ``civilian'' signals and reinforces a pooling equilibrium 
 of widespread self-silencing among civilians.
+
+% 8. CONCLUSION
+\section{Conclusion}
+
+This paper has developed a game-theoretic framework to analyze algorithmic surveillance as a strategic interaction between a state authority 
+and a targeted population under incomplete information. Using Israel's Blue Wolf system in Hebron as an empirical case, we extended the 
+preventive repression model of \citet{dragu2021digital} to incorporate classification errors and behavioral adaptation by surveilled individuals. 
+Three main findings emerge from the analysis. First, technological improvement in surveillance capacity unambiguously increases equilibrium 
+monitoring intensity, even when the population responds with costly adaptation. Second, when false positives carry political value for 
+population control, captured by the instrumentalization parameter $\alpha$, the government rationally expands surveillance beyond what pure 
+security objectives would warrant. Third, welfare losses from surveillance fall on both threat and non-threat types, but disproportionately 
+burden ordinary civilians who bear the costs of flagging and adaptation without any offsetting benefit from evasion. 
+The critical threshold $\alpha^* = F/(B+F)$ provides a simple diagnostic: where reputational or legal costs of errors are low, algorithmic 
+systems can drift into an ``errors as features'' regime in which misclassification becomes functional rather than accidental. This reframes 
+the policy problem. The challenge is not primarily technical, improving algorithmic accuracy, but institutional, ensuring that political and 
+legal structures make errors costly. In contexts of occupation and weak accountability, the model predicts that surveillance will expand and 
+persist even when the prevalence of genuine threats is low, because the logic of control dominates the logic of security. 
+Several avenues for further research remain open. A dynamic extension could formalize how data accumulation and algorithmic learning create 
+path-dependent escalation. Incorporating collective action among the surveilled population would illuminate the conditions under which 
+coordinated resistance can shift equilibrium outcomes. 
+
+% OPTIONAL APPENDIX 
+\appendix
+\section{Appendix: Notation and a Worked Illustration}
+
+This appendix provides a short worked illustration using simple functional forms.
+
+\subsection{Notation}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$s \in [0,\bar s]$ & surveillance intensity chosen by the government \\
+$t$ & technology level (higher $t$ lowers marginal surveillance cost) \\
+$\theta \in \{T,N\}$ & individual type: threat ($T$) or non-threat ($N$) \\
+$\lambda$ & population share of type $T$ \\
+$a_T,a_N \in [0,1]$ & adaptation effort by types $T$ and $N$ \\
+$\pi_T(\cdot)$ & true-positive probability (detecting $T$ correctly) \\
+$\pi_N(\cdot)$ & false-positive probability (flagging $N$ incorrectly) \\
+$B$ & benefit from correctly detecting threats \\
+$F$ & cost of false positives (reputation, legal constraints, backlash) \\
+$\alpha \in [0,1]$ & degree to which false positives are politically instrumentalized \\
+$k(\alpha)$ & net marginal weight on false positives: $k(\alpha)=\alpha B-(1-\alpha)F$ \\
+$D$ & individual cost of being flagged \\
+$V_T$ & type-$T$ value of evasion (avoiding detection) \\
+$C_G(s,t)$ & government surveillance cost, decreasing in $t$ \\
+$C_P(a)$ & adaptation cost, increasing and convex \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{A short illustration}
+To keep the algebra simple, suppose that
+\[
+\pi_T(x)=x,\qquad \pi_N(x)=\eta x \ \ \text{with}\ \ \eta\in(0,1),\qquad
+C_G(s,t)=\frac{s^2}{2t},\qquad C_P(a)=\frac{c}{2}a^2,
+\]
+and adaptation reduces ``effective surveillance'' as in the main text: the argument is $s(1-a_\theta)$.
+
+Given $s$, the first-order conditions for individuals imply interior best responses
+\[
+a_T^*(s)=\frac{(V_T+D)s}{c},\qquad a_N^*(s)=\frac{D\eta s}{c}
+\]
+Substituting these into the government's objective yields a concave
+quadratic in $s$, with interior optimum
+\[
+s^*(t,\alpha)=
+\frac{\lambda B+(1-\lambda)\eta\,k(\alpha)}
+{2\Big[\lambda B\frac{V_T+D}{c}+(1-\lambda)\eta\,k(\alpha)\frac{D\eta}{c}\Big]+\frac{1}{t}},
+\qquad\text{where }k(\alpha)=\alpha(B+F)-F.
+\]
+This expression makes the paper's comparative statics transparent in a single instantiation:
+holding other parameters fixed, higher $t$ lowers the $\frac{1}{t}$ term in the denominator, increasing $s^*$.
+Likewise, higher $\alpha$ raises $k(\alpha)$, which (when the numerator is positive) increases the government's
+incentive to surveil by making false positives less costly and potentially beneficial at the margin.
 
 % REFERENCES
 \newpage
