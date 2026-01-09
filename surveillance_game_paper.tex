@@ -42,6 +42,8 @@
 \newtheorem{definition}{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}
 
 % Hyperref setup
 \hypersetup{
@@ -219,10 +221,26 @@ positives among non-threats. Let:
 Both functions are increasing in $s$, with $\pi_T(s) > \pi_N(s)$ for all $s > 0$ (the system performs better than random). The cost of 
 surveillance is $C_G(s,t)$, decreasing in technology level $t$.
 
-\textbf{Population Response.} Individuals choose adaptation effort $a_\theta \in [0, \bar{a}]$. As seen in the literature, adaptation includes avoiding monitored areas, 
+We assume $C_G(s,t)$ is increasing and strictly convex in $s$, and that higher technology lowers the marginal cost of surveillance:
+$$
+\frac{\partial C_G}{\partial s}(s,t) > 0,
+\qquad
+\frac{\partial^2 C_G}{\partial s^2}(s,t) > 0,
+\qquad
+\frac{\partial^2 C_G}{\partial s\,\partial t}(s,t)\le 0.
+$$
+
+\textbf{Population Response.} Individuals choose adaptation effort $a_\theta \in [0,1]$. As seen in the literature, adaptation includes avoiding monitored areas, 
 limiting social connections, modifying communication patterns, and other behavioral changes that reduce detectability. For type $T$ individuals, 
 adaptation reduces the probability of detection. For type $N$ individuals, adaptation may reduce false positive risk but imposes costs on daily 
-life, such as the shrinking of their private spaces. Let $C_P(a)$ denote the cost of adaptation, increasing and convex in $a$.
+life, such as the shrinking of their private spaces.
+
+Let $C_P(a)$ denote the cost of adaptation, increasing and strictly convex:
+$$
+C_P'(a) > 0,
+\qquad
+C_P''(a) > 0.
+$$
 
 \textbf{Probability bounds.} We interpret $\pi_T(\cdot)$ and $\pi_N(\cdot)$ as probabilities. To ensure they are always well-defined and lie 
 in $[0,1]$, we restrict choices so that the argument of these functions never leaves their domain. Let $\pi_T,\pi_N:[0,\bar s]\to[0,1]$ be 
@@ -296,10 +314,10 @@ For type $N$ individuals:
     = D\, s \,\pi'_N\!\big(s(1-a_N)\big) - C'_P(a_N) = 0    
 \end{equation}
 
-\begin{proposition}[Existence and Uniqueness]
-Under standard regularity conditions (compact strategy sets; $C_G$ and $C_P$ twice continuously differentiable and strictly convex; 
-$\pi_T$ and $\pi_N$ continuous, increasing, and concave), a Bayesian Nash Equilibrium exists. In common parametric specifications, 
-the equilibrium is unique and interior.
+\begin{proposition}[Existence (and uniqueness under strict concavity)]
+Fix $t$. If strategy sets are compact and payoffs are continuous in $(s,a_T,a_N)$, a Bayesian Nash equilibrium exists.
+If, in addition, each player's payoff is strictly concave in its own action (for instance, under the curvature-dominance conditions stated in the Appendix),
+then the equilibrium is unique. In common parametric specifications, the unique equilibrium is interior.
 \end{proposition}
 
 Existence follows from continuity of payoffs and compactness of the strategy spaces, which ensure a fixed point of best responses. 
@@ -318,7 +336,8 @@ creates an `arms race' dynamic, but the government consistently gains in equilib
 
 \begin{proposition}[Error Instrumentalization Expands Surveillance]
 Equilibrium surveillance $s^*$ is increasing in the instrumentalization parameter $\alpha$. As false positives become more politically valuable, 
-the government expands surveillance beyond what would be optimal for pure security purposes.
+the government expands surveillance beyond what would be optimal for pure security purposes. Individuals' payoffs do not depend on $\alpha$, 
+so the only way $\alpha$ moves equilibrium is through the government's best response.
 \end{proposition}
 
 Increasing $\alpha$ raises the marginal payoff weight on false positives in the government's objective, strengthening the incentive to increase 
@@ -330,6 +349,7 @@ surveillance system.
 
 \begin{proposition}[Population Welfare Declines with Technology]
 Expected utility of both type $T$ and type $N$ individuals is decreasing in technology level $t$ and in instrumentalization parameter $\alpha$.
+Equilibrium utility decreases because equilibrium surveillance increases, and utility is decreasing in surveillance even after best-responding in adaptation.
 \end{proposition}
 
 A higher $t$ induces higher equilibrium surveillance, increasing both true-positive detection of type $T$ and false-positive flagging of type 
@@ -393,29 +413,111 @@ of collection in Hebron \citep{kubovich2022israeli, goodfriend2023algorithmic}. 
 abstracting from collective action and organized resistance. Extending the framework to incorporate coordination among surveilled populations would 
 illuminate additional dynamics. 
 
-% 7. POSSIBLE EXPANSION: Signaling Game Interpretation
-\section{Possible Expansion: Signaling Game Interpretation}
-A possible expansion of this model could be to reinterpret the Hebron setting as a signaling game, specifically as an adaptation of the classic 
-Beer--Quiche game. In the traditional Beer--Quiche game, individuals of different types choose between two observable signals (beer or quiche) 
-to convey their type to a receiver who then takes an action based on the observed signal. The sender's type is private information, and the 
-receiver must infer the sender's type from the chosen signal. Within this framework, we can reinterpret the Hebron setting as a signaling 
-environment in which Palestinians are the senders and IDF soldiers operating Blue Wolf are the receivers. Each Palestinian has a private 
-type $\theta \in \{T, N\}$, where $T$ denotes a real security threat type (as defined by the classification system), and $N$ a civilian 
-(non-threat). Crucially, unlike in the classic model, both types strictly prefer to be classified as ``civilian'' 
-rather than ``security threat,'' because 
-any threat classification leads to detention, harassment, or long-term consequences in the database. Observable signals include participation 
-in protests, dense social networks, movement patterns, or other behaviors that are algorithmically encoded as risk factors. Soldiers, aided by 
-Blue Wolf, map these signals into a binary action: classify and treat the individual as security threat (red/yellow) or civilian (green).
+% 7. POSSIBLE EXPANSIONS
 
-In a standard Beer--Quiche setup, equilibrium often hinges on one type having a differential taste for a costly signal (e.g., tough types liking 
-beer more), which can sustain a separating equilibrium. Here, however, protest or politically salient behavior is costly for both types once it 
-is surveilled, because the algorithm increases the probability of security threat classification regardless of $\theta$. 
-This pushes the game toward pooling on low-risk signals, with both $T$ and $N$ types strategically avoiding protest or visible dissent. 
-From the soldiers' perspective, 
-the algorithm acts like an imprecise decoding rule that sometimes classifies $N$ as $T$. When such false positives are politically instrumental 
-(high $\alpha$), the receiver is effectively rewarded for treating many signals as evidence of terrorism, which, as in the model we tackled in 
-the previous sections, shrinks the range of behaviors that can safely function as ``civilian'' signals and reinforces a pooling equilibrium 
-of widespread self-silencing among civilians.
+\section{Possible Expansion: Signaling, Thresholds, and Institutional Accountability}
+
+A natural extension is to recast the Hebron setting as a signaling environment in which Palestinians strategically choose observable behaviors
+that act as signals, while the state combines these signals with algorithmic outputs to decide whether to detain or allow passage. This connects the
+paper's incomplete-information logic to classic signaling models (e.g., Beer--Quiche), but modifies them in three empirically relevant ways:
+(i) both types may prefer to appear ``non-threatening'';
+(ii) the receiver's decision rule is mediated by a noisy algorithmic score with an adjustable classification threshold; and
+(iii) political accountability and street-level incentives shape how costly (or beneficial) errors are for the state.
+
+\subsection{From Beer--Quiche to ``Protest--Silence''}
+
+Consider a representative civilian (sender) with private type $\theta \in \{T,N\}$, where $T$ denotes ``threat'' and $N$ denotes ``non-threat.''
+The sender chooses an observable signal $x \in \{L,H\}$.
+Interpret $H$ as a politically salient or risk-associated behavioral profile (e.g., participation in protests, dense social ties, frequent presence in
+monitored areas), and $L$ as a low-visibility profile (avoidance, self-silencing, cautious movement).
+
+Unlike standard Beer--Quiche, it is plausible here that both types strictly prefer to be treated as ``civilian'' because being classified as a threat
+is costly regardless of $\theta$. Thus, separation need not arise from a type-specific ``taste'' for a risky signal; instead, the equilibrium may
+feature pooling on $L$ (self-silencing) because $H$ becomes dangerous for everyone once it is surveilled and encoded as a risk feature.
+
+
+\subsection{Technology affects both cost and accuracy}
+
+In the baseline model, technology $t$ lowers the marginal cost of surveillance through $C_G(s,t)$. In the signaling extension, it is also natural to let
+technology shift the informativeness of the score $y$.
+
+A convenient ``accuracy channel'' assumption is that higher $t$ improves type separation in the score distributions. One reduced-form way to state this is:
+$$
+\frac{\partial \pi_T}{\partial t}(s,\tau,t \mid x) \ge 0,
+\qquad
+\frac{\partial \pi_N}{\partial t}(s,\tau,t \mid x) \le 0,
+$$
+for relevant $(s,\tau,x)$ (i.e., better technology raises detection of threats while lowering false positives at a given threshold), though weaker
+assumptions can be used (e.g., a monotone-likelihood-ratio property in $(y,\theta)$ that becomes stronger with $t$).
+
+This two-channel formulation is substantively useful because it breaks the mechanical link ``better technology $\Rightarrow$ more surveillance.''
+When $t$ increases accuracy, the state could in principle reduce $s$ or raise $\tau$ (less harsh policy) while preserving detection performance,
+but whether that happens depends on the state's incentives over false positives.
+
+\subsection{Algorithm as a noisy decoder and the government's threshold choice}
+
+Let the state (receiver) observe the chosen signal $x$ and an algorithmic risk score $y \in \mathbb{R}$ produced by the surveillance system.
+The score distribution depends on type, signal, surveillance intensity, and technology:
+$$
+y \sim f_\theta(\cdot \mid x, s, t).
+$$
+The receiver then chooses an action $r \in \{0,1\}$, where $r=1$ denotes ``flag/detain'' and $r=0$ denotes ``clear/release.''
+
+A key addition is that the state chooses a classification threshold $\tau \in \mathbb{R}$ (or, equivalently, a mapping from colors to actions).
+A simple decision rule is:
+$$
+r(y;\tau)=\mathbf{1}\{y \ge \tau\}.
+$$
+This explicitly separates (i) deployment intensity $s$ (how much surveillance is applied) from (ii) policy strictness $\tau$
+(how aggressive the labeling rule is). For each signal $x$, define the induced true-positive and false-positive rates:
+$$
+\pi_T(s,\tau,t \mid x)=\Pr(y \ge \tau \mid \theta=T, x, s, t),
+\qquad
+\pi_N(s,\tau,t \mid x)=\Pr(y \ge \tau \mid \theta=N, x, s, t).
+$$
+Holding $(s,t,x)$ fixed, lowering $\tau$ increases both $\pi_T$ and $\pi_N$. In words: a more aggressive threshold detains more true threats
+but also increases false positives among civilians.
+
+This threshold choice makes the paper's substantive ``harsher policy'' claim literal: harsher governance can manifest either as larger $s$
+(more encounters, more scans) or as lower $\tau$ (a more aggressive rule that converts scores into detentions).
+
+\subsection{Accountability, threat prevalence, and a persistence condition}
+
+Let $\lambda \in (0,1)$ denote the prior probability of type $T$. As in the main model, let $B$ be the benefit from correctly flagging threats and $F$
+the cost of false positives. Let $\alpha \in [0,1]$ capture the extent to which false positives are politically instrumentalized. Define the net marginal
+weight on false positives:
+$$
+k(\alpha)=\alpha B-(1-\alpha)F=\alpha(B+F)-F.
+$$
+
+In the extended model, the government's expected objective can be written schematically as a function of $(s,\tau)$:
+$$
+U_G(s,\tau; t)
+=
+\lambda B \, \pi_T(s,\tau,t \mid x)
++
+(1-\lambda)k(\alpha)\,\pi_N(s,\tau,t \mid x)
+-
+C_G(s,t),
+$$
+where the dependence on $x$ reflects the sender's equilibrium signaling behavior (pooling or separating).
+
+This representation highlights three content-relevant comparative statics:
+
+\textbf{(i) Accountability as $F$.}
+Holding $\alpha$ fixed, increasing $F$ lowers $k(\alpha)$ and reduces the marginal attractiveness of policies that generate false positives. Thus,
+stronger oversight (higher expected $F$) should push toward lower surveillance intensity $s$ and/or a less aggressive threshold (higher $\tau$),
+even if technology is advanced.
+
+\textbf{(ii) Threat prevalence as $\lambda$.}
+Increasing $\lambda$ raises the marginal value of true positives and tends to increase $s$ and/or lower $\tau$. However, when $\alpha$ is large,
+policy becomes less sensitive to $\lambda$ because a larger share of the government's payoff comes from broad flagging rather than accurate targeting.
+
+\textbf{(iii) Surveillance persistence when threats are rare.}
+A sharp implication emerges from the sign of $k(\alpha)$. If $k(\alpha)>0$ (equivalently, $\alpha>\alpha^*=\frac{F}{B+F}$), then false positives
+are beneficial at the margin. In that regime, the government can have an incentive to maintain a harsh policy even when $\lambda$ is very small:
+as $\lambda \to 0$, the false-positive term remains, so optimal $(s,\tau)$ need not converge to minimal surveillance. Substantively, this formalizes
+the idea that control incentives can sustain surveillance even when genuine threats are rare.
 
 % 8. CONCLUSION
 \section{Conclusion}
@@ -436,62 +538,6 @@ persist even when the prevalence of genuine threats is low, because the logic of
 Several avenues for further research remain open. A dynamic extension could formalize how data accumulation and algorithmic learning create 
 path-dependent escalation. Incorporating collective action among the surveilled population would illuminate the conditions under which 
 coordinated resistance can shift equilibrium outcomes. 
-
-% OPTIONAL APPENDIX 
-\appendix
-\section{Appendix: Notation and a Worked Illustration}
-
-This appendix provides a short worked illustration using simple functional forms.
-
-\subsection{Notation}
-\begin{center}
-\begin{tabular}{@{}ll@{}}
-\toprule
-Symbol & Meaning \\
-\midrule
-$s \in [0,\bar s]$ & surveillance intensity chosen by the government \\
-$t$ & technology level (higher $t$ lowers marginal surveillance cost) \\
-$\theta \in \{T,N\}$ & individual type: threat ($T$) or non-threat ($N$) \\
-$\lambda$ & population share of type $T$ \\
-$a_T,a_N \in [0,1]$ & adaptation effort by types $T$ and $N$ \\
-$\pi_T(\cdot)$ & true-positive probability (detecting $T$ correctly) \\
-$\pi_N(\cdot)$ & false-positive probability (flagging $N$ incorrectly) \\
-$B$ & benefit from correctly detecting threats \\
-$F$ & cost of false positives (reputation, legal constraints, backlash) \\
-$\alpha \in [0,1]$ & degree to which false positives are politically instrumentalized \\
-$k(\alpha)$ & net marginal weight on false positives: $k(\alpha)=\alpha B-(1-\alpha)F$ \\
-$D$ & individual cost of being flagged \\
-$V_T$ & type-$T$ value of evasion (avoiding detection) \\
-$C_G(s,t)$ & government surveillance cost, decreasing in $t$ \\
-$C_P(a)$ & adaptation cost, increasing and convex \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsection{A short illustration}
-To keep the algebra simple, suppose that
-\[
-\pi_T(x)=x,\qquad \pi_N(x)=\eta x \ \ \text{with}\ \ \eta\in(0,1),\qquad
-C_G(s,t)=\frac{s^2}{2t},\qquad C_P(a)=\frac{c}{2}a^2,
-\]
-and adaptation reduces ``effective surveillance'' as in the main text: the argument is $s(1-a_\theta)$.
-
-Given $s$, the first-order conditions for individuals imply interior best responses
-\[
-a_T^*(s)=\frac{(V_T+D)s}{c},\qquad a_N^*(s)=\frac{D\eta s}{c}
-\]
-Substituting these into the government's objective yields a concave
-quadratic in $s$, with interior optimum
-\[
-s^*(t,\alpha)=
-\frac{\lambda B+(1-\lambda)\eta\,k(\alpha)}
-{2\Big[\lambda B\frac{V_T+D}{c}+(1-\lambda)\eta\,k(\alpha)\frac{D\eta}{c}\Big]+\frac{1}{t}},
-\qquad\text{where }k(\alpha)=\alpha(B+F)-F.
-\]
-This expression makes the paper's comparative statics transparent in a single instantiation:
-holding other parameters fixed, higher $t$ lowers the $\frac{1}{t}$ term in the denominator, increasing $s^*$.
-Likewise, higher $\alpha$ raises $k(\alpha)$, which (when the numerator is positive) increases the government's
-incentive to surveil by making false positives less costly and potentially beneficial at the margin.
 
 % REFERENCES
 \newpage
@@ -602,4 +648,247 @@ Zureik, E. (2011).
 \newblock Routledge.
 
 \end{thebibliography}
+
+% APPENDIX 
+\newpage
+\appendix
+\section{Appendix: Notation and Proof Sketches}
+
+This appendix provides a summary of notation and a set of proof sketches for the formal results stated in Section~5. The goal is to record the
+key steps and the main sufficient conditions under which the claims hold, without reproducing full-length derivations. A complete set of proofs
+(with all regularity assumptions stated explicitly, boundary cases treated, and all steps written out) can be provided upon request.
+
+\subsection{Notation}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$s \in [0,\bar s]$ & surveillance intensity chosen by the government \\
+$t$ & technology level (higher $t$ lowers marginal surveillance cost) \\
+$\theta \in \{T,N\}$ & individual type: threat ($T$) or non-threat ($N$) \\
+$\lambda$ & population share of type $T$ \\
+$a_T,a_N \in [0,1]$ & adaptation effort by types $T$ and $N$ \\
+$\pi_T(\cdot)$ & true-positive probability (detecting $T$ correctly) \\
+$\pi_N(\cdot)$ & false-positive probability (flagging $N$ incorrectly) \\
+$B$ & benefit from correctly detecting threats \\
+$F$ & cost of false positives (reputation, legal constraints, backlash) \\
+$\alpha \in [0,1]$ & degree to which false positives are politically instrumentalized \\
+$k(\alpha)$ & net marginal weight on false positives: $k(\alpha)=\alpha B-(1-\alpha)F$ \\
+$D$ & individual cost of being flagged \\
+$V_T$ & type-$T$ value of evasion (avoiding detection) \\
+$C_G(s,t)$ & government surveillance cost \\
+$C_P(a)$ & adaptation cost \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Standing assumptions used in the sketches}
+
+The sketches below use the following standard assumptions, which are consistent with the model statements in Sections~4--5.
+
+\begin{assumption}[Feasible sets and smoothness]
+The strategy sets are compact:
+$$
+s \in [0,\bar s],
+\qquad
+a_T \in [0,1],
+\qquad
+a_N \in [0,1].
+$$
+The functions $C_G(\cdot,\cdot)$ and $C_P(\cdot)$ are twice continuously differentiable, and $\pi_T(\cdot)$ and $\pi_N(\cdot)$ are twice continuously differentiable on $[0,\bar s]$.
+\end{assumption}
+
+\begin{assumption}[Monotonicity and curvature]
+The probability functions are increasing and concave:
+$$
+\pi_T'(x) \ge 0,
+\quad
+\pi_N'(x) \ge 0,
+\quad
+\pi_T''(x) \le 0,
+\quad
+\pi_N''(x) \le 0,
+\qquad
+\text{for all } x \in [0,\bar s].
+$$
+The cost functions are increasing and strictly convex in the relevant choices:
+$$
+\frac{\partial C_G}{\partial s}(s,t) > 0,
+\qquad
+\frac{\partial^2 C_G}{\partial s^2}(s,t) > 0,
+\qquad
+C_P'(a) > 0,
+\qquad
+C_P''(a) > 0.
+$$
+\end{assumption}
+
+\begin{assumption}[Technology reduces marginal surveillance cost]
+Technology lowers the marginal cost of surveillance in the sense of a weakly negative cross-partial:
+$$
+\frac{\partial^2 C_G}{\partial s\,\partial t}(s,t)\le 0.
+$$
+\end{assumption}
+
+\subsection{Existence (and typical uniqueness)}
+
+\begin{proof}[Proof sketch (Existence and uniqueness under strict concavity)]
+Fix $t$ and consider the Stage~1 game. By compactness of the strategy sets and continuity of payoffs in $(s,a_T,a_N)$, existence of a mixed-strategy equilibrium follows from standard fixed-point arguments. To obtain a pure-strategy equilibrium with well-behaved comparative statics, it is convenient to impose sufficient conditions guaranteeing single-valued best responses.
+
+A sufficient route is strict concavity of each player's payoff in its own action. For the government, holding $(a_T,a_N)$ fixed, the objective is
+$$
+U_G(s;a_T,a_N,t)
+=
+\lambda B\,\pi_T\!\bigl(s(1-a_T)\bigr)
++
+(1-\lambda)k(\alpha)\,\pi_N\!\bigl(s(1-a_N)\bigr)
+-
+C_G(s,t),
+$$
+where
+$$
+k(\alpha)=\alpha(B+F)-F.
+$$
+Concavity of $\pi_T$ and $\pi_N$ implies the benefit terms are concave in $s$, while strict convexity of $C_G$ implies $-C_G$ is strictly concave. A sufficient ``curvature dominance'' condition ensuring strict concavity of $U_G$ in $s$ is that for all feasible $(s,a_T,a_N)$,
+$$
+\frac{\partial^2 C_G}{\partial s^2}(s,t)
+>
+\lambda B(1-a_T)^2\bigl|\pi_T''(s(1-a_T))\bigr|
++
+(1-\lambda)\bigl|k(\alpha)\bigr|(1-a_N)^2\bigl|\pi_N''(s(1-a_N))\bigr|.
+$$
+Similarly, for type $T$ the payoff is
+$$
+U_T(s,a_T)
+=
+V_T
+-
+(V_T+D)\,\pi_T\!\bigl(s(1-a_T)\bigr)
+-
+C_P(a_T),
+$$
+and strict concavity in $a_T$ is ensured if
+$$
+C_P''(a_T) > (V_T+D)s^2\bigl|\pi_T''(s(1-a_T))\bigr|.
+$$
+For type $N$,
+$$
+U_N(s,a_N)
+=
+-D\,\pi_N\!\bigl(s(1-a_N)\bigr)
+-
+C_P(a_N),
+$$
+and strict concavity in $a_N$ is ensured if
+$$
+C_P''(a_N) > Ds^2\bigl|\pi_N''(s(1-a_N))\bigr|.
+$$
+Under these conditions, each best response is single-valued and continuous. The joint best-response map from the compact convex set $[0,\bar s]\times[0,1]\times[0,1]$ to itself has a fixed point, yielding a pure-strategy Bayesian Nash equilibrium. When best responses are single-valued, the equilibrium is unique. Interiorness follows when the unique optimizer satisfies the first-order conditions with strict inequalities ruling out boundary solutions (e.g., Inada-type behavior or sufficiently steep marginal costs near the boundaries).
+\end{proof}
+
+\subsection{A useful monotonicity lemma}
+
+\begin{lemma}[Monotonicity preserved under maximization]
+Fix a type $\theta \in \{T,N\}$. Suppose that for all feasible $a_\theta \in [0,1]$, the payoff $U_\theta(s,a_\theta)$ is weakly decreasing in $s$.
+Define the value function
+$$
+\widehat U_\theta(s)=\max_{a_\theta\in[0,1]} U_\theta(s,a_\theta).
+$$
+Then $\widehat U_\theta(s)$ is weakly decreasing in $s$.
+\end{lemma}
+
+\begin{proof}
+Let $s_2>s_1$. For any feasible $a_\theta$,
+$$
+U_\theta(s_2,a_\theta)\le U_\theta(s_1,a_\theta).
+$$
+Taking maxima over $a_\theta\in[0,1]$ on both sides yields
+$$
+\max_{a_\theta\in[0,1]}U_\theta(s_2,a_\theta)
+\le
+\max_{a_\theta\in[0,1]}U_\theta(s_1,a_\theta),
+$$
+which proves the claim.
+\end{proof}
+
+\subsection{Comparative statics in $t$ and $\alpha$}
+
+\begin{proof}[Proof sketch (Technology increases surveillance)]
+Fix $(a_T,a_N)$ and write the government's payoff as
+$$
+U_G(s;a_T,a_N,t)
+=
+\lambda B\,\pi_T\!\bigl(s(1-a_T)\bigr)
++
+(1-\lambda)k(\alpha)\,\pi_N\!\bigl(s(1-a_N)\bigr)
+-
+C_G(s,t).
+$$
+The benefit terms do not depend on $t$. Under the technology condition
+$$
+\frac{\partial^2 C_G}{\partial s\,\partial t}(s,t)\le 0,
+$$
+the function $-C_G(s,t)$ has increasing differences in $(s,t)$, hence so does $U_G(s;a_T,a_N,t)$. Therefore the government's best response in $s$ is nondecreasing in $t$ (Topkis' monotonicity theorem). With uniqueness (or by selecting the smallest or largest best response), equilibrium surveillance $s^*(t)$ is increasing in $t$.
+\end{proof}
+
+\begin{proof}[Proof sketch (Error instrumentalization expands surveillance)]
+The dependence on $\alpha$ enters only through the net weight on false positives
+$$
+k(\alpha)=\alpha(B+F)-F.
+$$
+Holding $(a_T,a_N,t)$ fixed, differentiate $U_G$ with respect to $\alpha$:
+$$
+\frac{\partial U_G}{\partial \alpha}
+=
+(1-\lambda)(B+F)\,\pi_N\!\bigl(s(1-a_N)\bigr).
+$$
+Since $\pi_N(\cdot)$ is increasing and the argument $s(1-a_N)$ is increasing in $s$, the expression above is increasing in $s$. Thus $U_G$ has increasing differences in $(s,\alpha)$, implying the government's best-response surveillance level is nondecreasing in $\alpha$. With uniqueness (or a monotone selection), equilibrium surveillance $s^*$ is increasing in $\alpha$.
+\end{proof}
+
+\begin{proof}[Proof sketch (Population welfare declines with $t$ and $\alpha$)]
+Fix $(s,a_N)$. For a non-threat type,
+$$
+U_N(s,a_N)
+=
+-D\,\pi_N\!\bigl(s(1-a_N)\bigr)
+-
+C_P(a_N),
+$$
+so
+$$
+\frac{\partial U_N}{\partial s}
+=
+-D\,\pi_N'\!\bigl(s(1-a_N)\bigr)\,(1-a_N)
+<
+0.
+$$
+Fix $(s,a_T)$. For a threat type,
+$$
+U_T(s,a_T)
+=
+V_T
+-
+(V_T+D)\,\pi_T\!\bigl(s(1-a_T)\bigr)
+-
+C_P(a_T),
+$$
+so
+$$
+\frac{\partial U_T}{\partial s}
+=
+-(V_T+D)\,\pi_T'\!\bigl(s(1-a_T)\bigr)\,(1-a_T)
+<
+0.
+$$
+Thus, for each type, payoffs are strictly decreasing in $s$ for every fixed adaptation choice. By the lemma above, the maximized payoffs after best-responding in adaptation,
+$$
+\widehat U_T(s)=\max_{a_T\in[0,1]}U_T(s,a_T),
+\qquad
+\widehat U_N(s)=\max_{a_N\in[0,1]}U_N(s,a_N),
+$$
+are also decreasing in $s$.
+
+From the previous comparative statics sketches, equilibrium surveillance $s^*$ increases in technology $t$ and in instrumentalization $\alpha$. Therefore equilibrium expected utility of both types decreases in $t$ and in $\alpha$ through the induced increase in $s^*$.
+\end{proof}
 \end{document}
