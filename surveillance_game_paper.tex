@@ -147,13 +147,15 @@ a signaling game, providing direction for further research.
 government engaging in preventive repression and an opposition group attempting to mobilize dissent. Their key insight is that digital 
 technology has dual effects: it lowers both the barriers to state surveillance and the barriers to opposition mobilization. Within this strategic 
 context, they demonstrate that technological advancement consistently increases equilibrium levels of preventive repression, even when technology 
-also benefits opposition groups. Three results from their analysis are particularly relevant. First, technological innovation unconditionally 
+also benefits opposition groups. 
+
+Three results from their analysis are particularly relevant. First, technological innovation unconditionally 
 increases government preventive repression in equilibrium. Second, the probability that government successfully prevents opposition mobilization 
 increases with technological development. Third, authoritarian governments prefer technologies that reduce the cost of preventive control and
 will strategically allow or block technologies based on their differential effects. We extend this framework in two directions. First, we 
 incorporate incomplete information about individual `threat types,' i.e., the fact that the state cannot perfectly distinguish between those who 
 pose real security threats and ordinary civilians. This generates classification errors with strategic consequences. Second, we model behavioral 
-adaptation by surveilled populations, i.e., changes in movement, communication, and social behavior in response to algorithmic monitoring. 
+adaptation by surveilled populations, i.e., changes in movement, communication, and social behavior in response to surveillance. 
 
 Critical surveillance studies emphasize that algorithmic systems do not simply observe populations but actively constitute them as objects of 
 governance \citep{browne2015dark, benjamin2019race}. Risk scoring and predictive analytics impose categories that shape subsequent treatment, 
@@ -406,19 +408,19 @@ constraint is whether political and legal institutions make errors costly.
 
 A further implication is that the effective degree of instrumentalization need not be set only at the top of the hierarchy. The empirical record 
 describes soldier photo quotas and competitive incentives for achieving `pairings' \citep{kubovich2022israeli}. This suggests a principal--agent 
-extension: implementers may receive local benefits from flagging and data production (recognition, rewards, career incentives), effectively 
-increasing the perceived benefit term associated with flagging (raising an implementer-level analogue of $\alpha$ or $B$) even when central 
+extension: soldiers may receive local benefits from flagging and data production (recognition, rewards, career incentives), effectively 
+increasing the perceived benefit term associated with flagging (raising an soldier-level analogue of $\alpha$ or $B$) even when central 
 authorities bear some reputational cost $F$. As a result, even if leadership prefers higher accuracy, street-level incentives can push the system 
 toward a regime in which false positives are operationally convenient and politically tolerable. In this interpretation, ``errors as features'' 
 can emerge endogenously from incentive design and institutional structure, not only from explicit political intent.
 
-Our model also has some evident limitations. The first is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
+Our model has some evident limitations. The first is that it is static, while the Blue Wolf context and the broader literature emphasize dynamic feedback 
 loops and learning over time. A minimal dynamic extension would allow technology $t$ (or the performance parameters embedded in $\pi_T$ and $\pi_N$) 
 to improve with data volume, and data volume to rise with surveillance intensity $s$. This might yield a self-reinforcing escalation of surveillance: 
-higher $s$ generates more data (through increased encounters, images, and registrations), which improves operational capacity and lowers marginal costs, 
+higher $s$ generates more data, which improves operational capacity and lowers marginal costs, 
 which then sustains or increases $s$ in the next period. This mechanism is consistent with the reported emphasis on data accumulation and the gamification 
 of collection in Hebron \citep{kubovich2022israeli, goodfriend2023algorithmic}. Moreover, the model treats the population as atomistic individuals, 
-abstracting from collective action and organized resistance. Extending the framework to incorporate coordination among surveilled populations would 
+abstracting from collective action and organized resistance. Extending the framework to incorporate coordination among populations would 
 illuminate additional dynamics. 
 
 % 7. POSSIBLE EXPANSIONS
@@ -533,16 +535,19 @@ the idea that control incentives can sustain surveillance even when genuine thre
 This paper has developed a game-theoretic framework to analyze algorithmic surveillance as a strategic interaction between a state authority 
 and a targeted population under incomplete information. Using Israel's Blue Wolf system in Hebron as an empirical case, we extended the 
 preventive repression model of \citet{dragu2021digital} to incorporate classification errors and behavioral adaptation by surveilled individuals. 
+
 Three main findings emerge from the analysis. First, technological improvement in surveillance capacity unambiguously increases equilibrium 
 monitoring intensity, even when the population responds with costly adaptation. Second, when false positives carry political value for 
 population control, captured by the instrumentalization parameter $\alpha$, the government rationally expands surveillance beyond what pure 
 security objectives would warrant. Third, welfare losses from surveillance fall on both threat and non-threat types, but disproportionately 
 burden ordinary civilians who bear the costs of flagging and adaptation without any offsetting benefit from evasion. 
+
 The critical threshold $\alpha^* = F/(B+F)$ provides a simple diagnostic: where reputational or legal costs of errors are low, algorithmic 
 systems can drift into an ``errors as features'' regime in which misclassification becomes functional rather than accidental. This reframes 
 the policy problem. The challenge is not primarily technical, improving algorithmic accuracy, but institutional, ensuring that political and 
 legal structures make errors costly. In contexts of occupation and weak accountability, the model predicts that surveillance will expand and 
 persist even when the prevalence of genuine threats is low, because the logic of control dominates the logic of security. 
+
 Several avenues for further research remain open. A dynamic extension could formalize how data accumulation and algorithmic learning create 
 path-dependent escalation. Incorporating collective action among the surveilled population would illuminate the conditions under which 
 coordinated resistance can shift equilibrium outcomes. 
